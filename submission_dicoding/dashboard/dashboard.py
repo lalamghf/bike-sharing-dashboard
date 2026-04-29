@@ -44,7 +44,7 @@ def create_temp_rent_df(df):
 # LOAD DATA
 # ==============================
 # Membaca data yang sudah dibersihkan
-all_df = pd.read_csv("main_data.csv")
+all_df = pd.read_csv("submission_dicoding/dashboard/main_data.csv")
 all_df["dteday"] = pd.to_datetime(all_df["dteday"])
 
 # ==============================
@@ -55,7 +55,7 @@ max_date = all_df["dteday"].max()
 
 with st.sidebar:
     # Memasukkan gambar lokal (Pastikan nama filenya sepeda.png dan ada di folder yang sama)
-    st.image("sepeda.jpg", use_container_width=True)
+    st.image("submission_dicoding/dashboard/sepeda.png", use_container_width=True)
     
     st.markdown("<h2 style='text-align: center;'>🚲 Bike Rent Filter</h2>", unsafe_allow_html=True)
     st.markdown("---")
