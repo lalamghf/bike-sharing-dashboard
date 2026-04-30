@@ -40,8 +40,8 @@ def create_temp_rent_df(df):
 # ==============================
 # Gunakan relative path agar kode bisa jalan di komputer mana saja asal folder dashboard lengkap
 try:
-    day_df = pd.read_csv("main_data.csv")
-    hour_df = pd.read_csv("hour.csv")
+    day_df = pd.read_csv("submission_dicoding/dashboard/main_data.csv")
+    hour_df = pd.read_csv("submission_dicoding/dashboard/hour.csv")
     
     day_df["dteday"] = pd.to_datetime(day_df["dteday"])
     hour_df["dteday"] = pd.to_datetime(hour_df["dteday"])
@@ -56,7 +56,7 @@ with st.sidebar:
     # Menampilkan Gambar Sepeda
     try:
         # Mencari gambar di folder yang sama
-        img = Image.open("sepeda.jpg")
+        img = Image.open("submission_dicoding/dashboard/sepeda.jpg")
         st.image(img, use_container_width=True)
     except:
         st.info("Tips: Letakkan file 'sepeda.jpg' di folder dashboard untuk menampilkan logo.")
